@@ -16,7 +16,7 @@ def register_models(register):
     register(LLMGroq("groq-gemma"))
     register(LLMGroq("groq-gemma2"))
     register(LLMGroq("groq-llama-3.3-70b"))
-
+    register(LLMGroq("groq-llama-3.3-70b-specdec"))
 
 class LLMGroq(llm.Model):
     can_stream = True
@@ -32,6 +32,7 @@ class LLMGroq(llm.Model):
         "groq-llama3.1-70b": "llama-3.1-70b-versatile",
         "groq-llama3.1-405b": "llama-3.1-405b-reasoning",
         "groq-llama-3.3-70b": "llama-3.3-70b-versatile",
+        "groq-llama-3.3-70b-specdec": "llama-3.3-70b-specdec",
     }
 
     class Options(llm.Options):
